@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="tertiary" >
+    <ion-title>Description</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="h4" >
+<ion-card *ngIf="job">
+<ion-card-title class="align">
+  <h3>{{job.company}}</h3>
+</ion-card-title>
+<ion-img [src]="job.company_logo"></ion-img>
+<h3>
+  {{job.company_url}}
+  {{job.created_at}}
+  {{job.location}}
+  {{job.type}}
+  {{job.title}}
+</h3>
+<h2>Description</h2>
+<div [innerHTML]="job.description"></div>
+<h4>Apply Now</h4>
+<div [innerHTML]="job.how_to_apply"></div>
+</ion-card>
+</ion-content>

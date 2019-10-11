@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Job Search
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="job" color="#20B22AA">
+  
+
+  <ion-card *ngFor="let job of name">
+      <div class="ion-padding">
+    <ion-item>
+  <ion-img [src]="job.name.company_logo" style="height:100px;width:100px;"></ion-img>
+<h3 style="font-family:'calibri', Courier, monospace;">
+  <ion-item>
+ <ion-title color="tertiary"><h2><b>Company Name:{{job.name.company}}</b></h2></ion-title>
+</ion-item>
+<ion-item>
+  <h3>Date:{{job.name.created_at}}</h3>
+</ion-item>
+<ion-item>
+  <h4>Location:{{job.name.location}}</h4>
+</ion-item>
+<ion-item>
+  <h5>Type:{{job.name.type}}</h5>
+</ion-item>
+<ion-item>
+  <h6>Discription:{{job.name.title}}</h6>
+</ion-item>
+<ion-fab-button  color="tertiary" [routerLink]="['/description', job.name.id]" >View job</ion-fab-button></h3>
+</ion-item>
+    
+  
+
+
+<!-- <ion-item [routerLink]="['/routepath']" routerLinkActive="router-link-active"> -->
+    
+</div>
+  </ion-card>
+
+</ion-content>
